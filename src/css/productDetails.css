@@ -1,0 +1,251 @@
+.product-details-container {
+    padding: 3rem 8rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, transform 0.2s;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.thumbnail:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.thumbnail.active {
+    opacity: 1;
+    border-color: #007bff;
+}
+
+.product-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-basis: 60%;
+    min-height: 600px;
+}
+
+
+.product-details-attribute {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5rem;
+    padding-right: 10rem;
+}
+
+.image-thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.image-slider {
+    height: 100%;
+    max-height: 700px;
+    width: 100%;
+    position: relative;
+}
+
+.main-image {
+    position: absolute;
+    height: auto;
+    inset: 0;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.image-thumbnails {
+    height: 100%;
+}
+
+.prev,
+.next {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+.product-details-name {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.product-details-attribute-group {
+    margin: 2rem 0;
+}
+
+.product-details-attribute-options {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.product-details-attribute-button {
+    padding: 0.5rem 0.8rem;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    width: auto;
+    min-width: 50px;
+    height: 50px;
+}
+
+.product-details-attribute-button.selected {
+    background-color: #333;
+    color: white;
+    border-color: #007bff;
+}
+
+.product-details-attribute-group p {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.price-container p {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart-btn {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    width: 90%;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+}
+
+.add-to-cart-btn.active {
+    background-color: #58e984;
+    cursor: pointer;
+}
+
+.add-to-cart-btn.disabled,
+.add-to-cart-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.add-to-cart-btn.active:hover {
+    background-color: #27ae60;
+}
+
+.product-details-description {
+    margin-top: 2rem;
+}
+
+@media (max-width:468px) {
+
+
+    .product-details-container {
+        padding: 3rem 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-images {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .image-thumbnails {
+        order: 2;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+
+
+    .image-slider {
+        position: relative;
+        height: 300px;
+        width: 100%;
+        max-height: 300px;
+    }
+
+    .main-image {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        inset: 0;
+    }
+
+
+    .main-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .prev,
+    .next {
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+    }
+
+    .prev {
+        left: 5px;
+    }
+
+    .next {
+        right: 5px;
+    }
+
+
+
+    .product-details-attribute {
+        padding: 3rem 1rem;
+    }
+
+}
