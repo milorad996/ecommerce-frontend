@@ -1,4 +1,4 @@
-const GRAPHQL_ENDPOINT = "https://ecommerce-backend.42web.io/graphql";
+const GRAPHQL_ENDPOINT = "https://ecommerce-backend-production-99be.up.railway.app/graphql";
 
 export const graphqlRequest = async (query, variables = {}) => {
     const response = await fetch(GRAPHQL_ENDPOINT, {

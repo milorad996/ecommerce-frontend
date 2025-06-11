@@ -1,10 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import graphqlPlugin from 'vite-plugin-graphql'
 
 export default defineConfig({
+  base: '/ecommerce-frontend/',
   plugins: [
     react(),
-    graphqlPlugin,
   ],
 })

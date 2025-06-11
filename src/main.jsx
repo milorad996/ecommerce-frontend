@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { CartProvider } from './contexts/CartContext.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter basename="/ecommerce-frontend">
     <CartProvider>
       <App />
     </CartProvider>
