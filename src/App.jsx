@@ -17,7 +17,7 @@ function App() {
       <NavbarComponent />
       {isOverlayOpen && <CartOverlay />}
       <Routes>
-        <Route path="/all" element={<ProductsPage />} />
+        <Route path="/" element={<ProductsPage />} />
         <Route path="/clothes" element={<ClothesPage />} />
         <Route path="/tech" element={<TechPage />} />
         <Route path="/product-details/:id" element={<ProductDetailsPage />} />
