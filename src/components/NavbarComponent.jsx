@@ -1,12 +1,17 @@
 import { Link, useLocation } from 'react-router-dom';
 import './../css/navbar.css';
 import { CartContext } from '../contexts/CartContext';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 function NavbarComponent() {
     const location = useLocation();
     const { toggleOverlay, cartItems } = useContext(CartContext);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    useEffect(() => {
+        if (window.innerWidth < 768 && window.location.hostname.includes('github.io')) {
+            setMobileMenuOpen(true);
+        }
+    }, []);
 
     const links = [
         { name: 'All', path: '/' },
