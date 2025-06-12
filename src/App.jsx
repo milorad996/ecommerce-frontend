@@ -18,7 +18,6 @@ function App() {
       {isOverlayOpen && <CartOverlay />}
       <Routes>
         <Route path="/all" element={<ProductsPage />} />
-        <Route path="/" element={<Navigate to="/all" />} />
         <Route path="/clothes" element={<ClothesPage />} />
         <Route path="/tech" element={<TechPage />} />
         <Route path="/product-details/:id" element={<ProductDetailsPage />} />
