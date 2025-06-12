@@ -14,7 +14,7 @@ function NavbarComponent() {
     }, []);
 
     const links = [
-        { name: 'All', path: '/' },
+        { name: 'All', path: '/all' },
         { name: 'Clothes', path: '/clothes' },
         { name: 'Tech', path: '/tech' }
     ];
